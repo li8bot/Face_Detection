@@ -1,13 +1,13 @@
 import cv2
 import sys
 imagePath = sys.argv[1]
+cscPath = sys.argv[2]
 
 # Create the haar cascade
-faceCascade = cv2.CascadeClassifier('face.xml')
+faceCascade = cv2.CascadeClassifier(cscPath)
 
 # Read the image
 image = cv2.imread(imagePath)
-#image = cv2.imread('2.jpg')
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 # Detect faces in the image
